@@ -36,8 +36,8 @@
 				<span>Answer no. 2: </span><input type="text" name="Question" size="30px" placeholder="Enter answer here" height="50" style="font-size:0.8em;" >
 				<button>+</button>
 				<div align="center"> <br>
-					<a><input class="button" type="submit" value="Post"></a>
-					<a><button class="button">New question</button></a>
+					<a><input class="button" type="submit" value="Post" onclick="message()"></a>
+					<a onclick="new_q"><button class="button">New question</button></a>
 				</div>
 				
 			</form>
@@ -49,4 +49,12 @@
 		</footer>
 	</body>
 </html>
+<script>
+	function message() {
+		alert("Your question has been posted!");
+	}
 
+	function new_q(){
+		window.location = 'posting.html'
+	}
+</script>
