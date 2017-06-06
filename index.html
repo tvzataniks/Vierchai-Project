@@ -17,9 +17,30 @@
 		<main align="center">
 			
 			<form align="center" id="index_form">
-
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 			<div id="changeText">Welcome!</div>
 
+				<script type="text/javascript">
+					var text = ["Please log in!","Welcome!"];
+					var counter = 0;
+					var elem = document.getElementById("changeText");
+
+					$(document).ready(function(){ change()});
+					function change() {
+
+					$("#changeText").fadeToggle(1500, 'swing', function(){
+					  if($("#changeText").css("display") == "none")
+					  {
+					 elem.innerHTML = text[counter];
+						counter++;
+						if(counter >= text.length) { counter = 0; }
+
+					  }
+					  change();
+					});
+
+					}
+				</script>
 				
 				<i id="icon" class="fa fa-user fa-2x" aria-hidden="true"></i> <input type="text" name="username" size="30px" placeholder="Username" height="50" style="font-size:1.2em;" required><br><br>
 				<i id="icon" class="fa fa-unlock-alt fa-2x" aria-hidden="true"></i> <input type="password" name="password" size="30px" placeholder="Password" style="font-size:1.2em;" required><br><br>
