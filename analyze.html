@@ -1,1 +1,96 @@
 
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Analyze</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+
+			<header id="headerbackground">
+				<img src="logo.png" id="logo" alt="logo" width="75" height="65">
+				<button class="button" id="logout">Log Out</button>
+			</header> 
+			
+		<main>
+			<form align="center" id="Answers">
+			 Question: here will be the question <button class="button"id="savebtn">Save</button><br><br>
+
+			<script src="js_graph/highcharts.js"></script>
+			<script src="js_graph/modules/exporting.js"></script>
+
+		<div id="container" style="max-width: 50%; margin: 0 auto"></div>
+
+
+
+		<script type="text/javascript">
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: ' '
+    },
+    xAxis: {
+        categories: [
+            'Answer1',
+            'Answer2',
+            'Answer3',
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Percentage of answers (%)'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Students',
+        data: [37.8, 42.6,19.6]
+    }]
+});
+		</script>
+		</form>
+		
+		<div class="bottombtn">
+			<button class="button">Make it public</button>
+			<button class="button" onclick="message()">Save all</button>
+			<br><br>
+			<a href="mailto:mail@tvz.hr"><button class="button" type="email">Send to email</button></a>
+		</div>
+	</main>
+		<footer id="footerbackground">
+			<h3>&copy; Vierchai</h3>
+		</footer>
+	
+		
+	</body>
+</html>
+
+
+<script>
+	function message() {
+		alert("Your results have been saved! ");
+	}
+
+
+</script>
