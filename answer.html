@@ -26,7 +26,7 @@
 				  <input type="radio" name="Answer1" value="Answer3">Answer3<br><br><br>
 				   <br><br>
 			</form>
-			<a ><input  class ="button" type="submit" value="Answer"></a>
+			<a ><input onclick="clickedButton()" class ="button" type="submit" value="Answer"></a>
 		</main>
 		
 		<footer id="footerbackground">
@@ -35,3 +35,11 @@
 		
 	</body>
 </html>
+
+ <script type="text/javascript" language="JavaScript">
+		  function clickedButton() {
+			window.location = 'index.html';
+			alert("Your answer has been sent! ");
+		}
+		
+  </script>
