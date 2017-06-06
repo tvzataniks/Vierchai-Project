@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Posting</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+		<header id="headerbackground">
+			<img src="logo.png" id="logo" alt="logo" width="75" >
+		</header> <br>
+		
+		<main align="center">
+			<header id="headerbackground">
+				<img src="logo.png" id="logo" alt="logo" width="75" height="65">
+				<button class="button" id="logout">Log Out</button>
+			</header>
+			
+			<form align="center" id="PostingQuestions">
+				 <input type="text" name="Question" size="50px" placeholder="Enter your question here" height="50" style="font-size:1em;"><br><br>
+				 <label><input type="checkbox" name="login" value="loginreq">Log In required to answer</label><br><hr/>
+				
+				Choose answer type:<br>
+					<label><input type="radio" name="chose" value="Radio">Radio button</label>
+					<label><input type="radio" name="chose" value="Checkbox">Checkbox</label>
+					<label><input type="radio" name="chose" value="Text">Text area</label><br><hr/>		
+									
+				
+				<div align="center"> <br>
+					<a><input class="button" type="submit" value="Post"></a>
+					<a><button class="button">New question</button></a>
+				</div>
+				
+			</form>
+			<a href="analyze.html" ><button class="button" >Show results</button></a>				
+		</main>
+		
+		<footer id="footerbackground">
+			<h3>&copy; Vierchai</h3>
+		</footer>
+	</body>
+</html>
 
