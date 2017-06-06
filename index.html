@@ -1,28 +1,47 @@
 <!DOCTYPE html>
-<html>	
+<html>
 	<head>
 		<title>Index Html</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<meta charset="UTF-8">
-		<link rel="icon" type="image/png"  href="images/favicon.png">
 	</head>
-	
+
 	<body>
-	<header>
-		<h1>Welcome!</h1>
-	</header>
-	<div>
-	<form>
-		Username:<input type="text" name="username"><br><br>
-		Password:<input type="password" name="password"><br><br>
-		<input class="button" type="submit" value="Log in">
-		<button class ="button">Continue without</button
-	</form>
-	</div>
-	
-	<footer></footer>
+
+			<header id="headerbackground">
+				<img src="logo.png" id="logo" alt="logo" width="75" height="65">
+				
+			</header> 
+			
+		<main align="center">
+			
+			<form align="center" id="index_form">
+
+			<div id="changeText">Welcome!</div>
+
+				
+				<i id="icon" class="fa fa-user fa-2x" aria-hidden="true"></i> <input type="text" name="username" size="30px" placeholder="Username" height="50" style="font-size:1.2em;" required><br><br>
+				<i id="icon" class="fa fa-unlock-alt fa-2x" aria-hidden="true"></i> <input type="password" name="password" size="30px" placeholder="Password" style="font-size:1.2em;" required><br><br>
+				<br><br>
+				<input class ="button" type="submit" value="Login" onClick="clickedButton()"> <br><br>
+			</form>
+				<a href="answer.html" ><button class ="button" >Continue without logging in</button></a>
+		</main>
+
+		
+		<footer id="footerbackground">
+			<h3>&copy; Vierchai</h3>
+		</footer>
+			
 	</body>
-	
-	
-	
-</html> 
+
+</html>
+
+ <script type="text/javascript" language="JavaScript">
+		  function clickedButton() {
+			window.location = 'posting.html'
+		}
+  </script>
+  
+  
